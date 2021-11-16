@@ -55,6 +55,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -126,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HangHoasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -135,7 +137,13 @@
     <Compile Include="Migrations\202111020028039_Create_Table_HangHoa.designer.cs">
       <DependentUpon>202111020028039_Create_Table_HangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111160102054_Create_Table_Account.cs" />
+    <Compile Include="Migrations\202111160102054_Create_Table_Account.designer.cs">
+      <DependentUpon>202111160102054_Create_Table_Account.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Encrytion.cs" />
     <Compile Include="Models\HangHoa.cs" />
     <Compile Include="Models\Process\StringProcess.cs" />
     <Compile Include="Models\QLHHDbContext.cs" />
@@ -182,6 +190,8 @@
     <Content Include="Views\HangHoas\Details.cshtml" />
     <Content Include="Views\HangHoas\Edit.cshtml" />
     <Content Include="Views\HangHoas\Index.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -202,6 +212,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202111020028039_Create_Table_HangHoa.resx">
       <DependentUpon>202111020028039_Create_Table_HangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111160102054_Create_Table_Account.resx">
+      <DependentUpon>202111160102054_Create_Table_Account.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

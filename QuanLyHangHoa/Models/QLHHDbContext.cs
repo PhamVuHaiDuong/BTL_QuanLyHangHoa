@@ -10,6 +10,7 @@ namespace QuanLyHangHoa.Models
         }
        
         public virtual DbSet<HangHoa> Hanghoas { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -17,6 +18,9 @@ namespace QuanLyHangHoa.Models
             modelBuilder.Entity<HangHoa>()
             .Property(e => e.MaHH)
             .IsUnicode(false);
+            modelBuilder.Entity<Account>()
+          .Property(e => e.Username)
+          .IsUnicode(false);
         }
     }
 }
