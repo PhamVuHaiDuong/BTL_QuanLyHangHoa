@@ -14,7 +14,7 @@ namespace QuanLyHangHoa.Controllers
         QLHHDbcontext db = new QLHHDbcontext();
         // GET: Account
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Register()
         {
             return View();
         }
@@ -29,7 +29,7 @@ namespace QuanLyHangHoa.Controllers
                 acc.Password = Encry.PasswordEncrytion(acc.Password);
                 db.Accounts.Add(acc);
                 db.SaveChanges();
-                return RedirectToAction("Login,Account");
+                return RedirectToAction("Login","Account");
             }
             return View(acc);
         }
@@ -45,6 +45,7 @@ namespace QuanLyHangHoa.Controllers
         {
             if (ModelState.IsValid)
             {
+                //ma hoa password gui len tu client
                 string encrytionpass = Encry.PasswordEncrytion(acc.Password);
                 var model = db.Accounts.Where(m => m.Username == acc.Username && m.Password == encrytionpass).ToList().Count();
                 if (model ==1)

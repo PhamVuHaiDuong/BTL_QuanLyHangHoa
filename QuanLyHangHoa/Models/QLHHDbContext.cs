@@ -12,6 +12,8 @@ namespace QuanLyHangHoa.Models
         public virtual DbSet<HangHoa> Hanghoas { get; set; }
         public virtual DbSet<Account> Accounts { get; set; }
 
+        public virtual DbSet<Person> People { get; set; }
+        public virtual DbSet<Student> Students { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
