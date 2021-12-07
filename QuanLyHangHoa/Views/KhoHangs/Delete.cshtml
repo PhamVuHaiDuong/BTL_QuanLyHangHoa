@@ -1,0 +1,39 @@
+﻿@model QuanLyHangHoa.Models.KhoHang
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xóa sản phẩm khỏi Kho hàng</h2>
+
+<h3 style="color: red">Bạn chắc chắn muốn xóa sản phẩm này chứ?</h3>
+<div>
+    <table border="2" width="200" class="dl-horizontal">
+        <tr>
+            <td><b>@Html.DisplayNameFor(model => model.TenSP)</b></td>
+            <td> @Html.DisplayFor(model => model.TenSP)</td>
+        </tr>
+        <tr>
+            <td><b>@Html.DisplayNameFor(model => model.SoLuong)</b></td>
+            <td> @Html.DisplayFor(model => model.SoLuong)</td>
+        </tr>
+        <tr>
+            <td><b>@Html.DisplayNameFor(model => model.DonGia)</b></td>
+            <td>@Html.DisplayFor(model => model.DonGia)</td>
+        </tr>
+        <tr>
+            <td><b>@Html.DisplayNameFor(model => model.PhanLoai)</b></td>
+            <td>@Html.DisplayFor(model => model.PhanLoai)</td>
+        </tr>
+    </table>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

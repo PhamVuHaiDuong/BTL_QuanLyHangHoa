@@ -1,0 +1,36 @@
+﻿@model QuanLyHangHoa.Models.KhoHang
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chi tiết sản phẩm</h2>
+
+<div> 
+        <table border="2" width="200" class="dl-horizontal">
+            <tr>
+                <td><b>@Html.DisplayNameFor(model => model.TenSP)</b></td>
+                <td> @Html.DisplayFor(model => model.TenSP)</td>
+            </tr>
+            <tr>
+                <td><b>@Html.DisplayNameFor(model => model.SoLuong)</b></td>
+                <td> @Html.DisplayFor(model => model.SoLuong)</td>
+            </tr>
+            <tr>
+                <td><b>@Html.DisplayNameFor(model => model.DonGia)</b></td>
+                <td>@Html.DisplayFor(model => model.DonGia)</td>
+            </tr>
+            <tr>
+                <td><b>@Html.DisplayNameFor(model => model.PhanLoai)</b></td>
+                <td>@Html.DisplayFor(model => model.PhanLoai)</td>
+            </tr>
+        </table>
+
+    
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaSP }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

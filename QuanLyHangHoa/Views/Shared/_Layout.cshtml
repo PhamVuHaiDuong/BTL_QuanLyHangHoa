@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿ <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -16,15 +16,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Quản Lý Kho Hàng", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Register","Register","Account")</li>
-                    <li>@Html.ActionLink("Login","Login","Account")</li>
-                    <li>@Html.ActionLink("Logout","Logout","Account")</li>
+                    <li>@Html.ActionLink("Nhân Viên","Index","NhanViens")</li>
+                    <li>@Html.ActionLink("Kho Hàng", "Index","KhoHangs")</li>
+                    <li>@Html.ActionLink("Nhập Hàng","Index","PhieuNhaps")</li>
+                    <li>@Html.ActionLink("Xuất Hàng","Index","PhieuXuats")</li>
+                    <li>@Html.ActionLink("Nhà Cung Cấp","Index","NhaCungCaps")</li>
+                    <li>@Html.ActionLink("Đăng ký tài khoản","Register","Account")</li>
+                    <li>@Html.ActionLink("Đăng Nhập","Login","Account")</li>
+                    <li>@Html.ActionLink("Đăng Xuất","Logout","Account")</li>
                 </ul>
             </div>
         </div>
